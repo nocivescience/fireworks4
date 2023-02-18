@@ -10,7 +10,7 @@ let simSpeed = 1;
 
 let scale = 1;
 if (IS_MOBILE) scale = 0.94;
-if (IS_HEADER) scale = 0.75;
+if (IS_HEADER) scale = 0.15;
 
 // Width/height values that take scale into account.
 // USE THESE FOR DRAWING POSITIONS
@@ -862,7 +862,7 @@ window.addEventListener('touchend', (event) => !IS_DESKTOP && requestFullscreen(
 // Account for window resize and custom scale changes.
 function handleResize() {
 	const w = window.innerWidth;
-	const h = window.innerHeight;
+	const h = window.innerHeight/3;
 	// Try to adopt screen size, heeding maximum sizes specified
 	const containerW = Math.min(w, MAX_WIDTH);
 	// On small screens, use full device height
