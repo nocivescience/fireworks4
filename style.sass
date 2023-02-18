@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap')
 
 $fuente-nombre: 'Roboto', sans-serif
+$fuente-enlaces: 'Raleway', sans-serif
 $small-bp: 640px
 $large-bp: 800px
 
@@ -203,13 +205,6 @@ body
 		@media (max-width: $large-bp) 
 			select, input 
 				outline: none
-			
-			
-		
-		
-	
-	
-
 	
 
 #close-menu-btn 
@@ -306,3 +301,66 @@ body
 	top: 0%
 	width: 100%
 	height: 100%
+.menu-container
+	color: white
+	position: absolute
+	top: 35%
+	right: 0
+	display: flex
+	width: 230px
+	justify-content: space-around
+	font-family: $fuente-nombre
+	font-size: 1.5em
+.icon-container
+	position: absolute
+	bottom: 20px
+	right: 30px
+	color: white
+	scale: 1.5
+	a
+		text-decoration: none
+		color: white
+	svg
+		&:hover
+			animation: cambiarSize 1s linear
+		@keyframes cambiarSize
+			0%, 100%
+				transform: scale(1)
+			5%
+				transform: scale(1.25)
+			10%
+				transform: scale(1)
+			15%
+				transform: scale(1.25)
+			20%
+				transform: scale(1)
+			25%
+				transform: scale(1.25)
+			30%
+				transform: scale(1)
+			35%
+				transform: scale(1.25)
+			40%
+				transform: scale(1)
+			45%
+				transform: scale(1.25)
+			50%
+				transform: scale(1)
+			55%
+				transform: scale(1.25)
+			60%
+				transform: scale(1)
+			65%
+				transform: scale(1.25)
+			70%
+				transform: scale(1)
+			75%
+				transform: scale(1.25)
+			80%
+				transform: scale(1)
+			85%
+				transform: scale(1.25)
+			90%
+				transform: scale(1)
+			95%
+				transform: scale(1.25)
