@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 * {
   position: relative;
   box-sizing: border-box;
@@ -18,6 +19,7 @@ body {
   font-family: "Russo One", arial, sans-serif;
   line-height: 1.25;
   letter-spacing: 0.06em;
+  border: none;
 }
 
 .hide {
@@ -34,7 +36,6 @@ body {
 }
 
 .container {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -227,4 +228,32 @@ body {
 .fireworks {
   opacity: 0.3;
   z-index: -10;
+}
+
+.nombre {
+  width: 20%;
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 0 0 20px white;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  top: 4%;
+  left: 10%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+@media (max-width: 640px) {
+  .nombre {
+    font-size: 2em;
+    left: 5%;
+    width: 30%;
+  }
+}
+
+.body-container {
+  top: 0%;
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
