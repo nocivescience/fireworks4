@@ -1,8 +1,4 @@
 'use strict';
-console.clear();
-
-
-
 const IS_MOBILE = window.innerWidth <= 640;
 const IS_DESKTOP = window.innerWidth > 800;
 const IS_HEADER = IS_DESKTOP && window.innerHeight < 300;
@@ -56,8 +52,6 @@ const stages = [
 	trailsStage,
 	mainStage
 ];
-
-
 
 
 // Interactive state management
@@ -116,10 +110,7 @@ const store = {
 					config.skyLighting = data.skyLighting;
 					config.hideControls = data.hideControls;
 					break;
-				default:
-					console.error('Version switch should be exhaustive. Falling back to default settings.');
 			}
-			console.log(`Loaded config (schema version ${schemaVersion})`);
 		}
 		// Deprecated data format. Apply carefully (it's not namespaced).
 		else if (localStorage.getItem('schemaVersion') === '1') {
@@ -132,8 +123,6 @@ const store = {
 				hideControls = typeof hideControlsRaw === 'string' && JSON.parse(hideControlsRaw);
 			}
 			catch(e) {
-				console.log('Recovered from error parsing saved config:');
-				console.error(e);
 				return;
 			}
 			// Only restore validated values
@@ -311,7 +300,9 @@ appNodes.hideControlsLabel.addEventListener('click', () => setTimeout(updateConf
 
 // Constant derivations
 const COLOR_NAMES = Object.keys(COLOR);
-const COLOR_CODES = COLOR_NAMES.map(colorName => COLOR[colorName]);
+const COLOR_CODES = COLOR_NAMES.map(colorName => {
+  return COLOR[colorName];
+});
 // Invisible stars need an indentifier, even through they won't be rendered - physics still apply.
 const COLOR_CODES_W_INVIS = [...COLOR_CODES, INVISIBLE];
 // Map of color codes to their index in the array. Useful for quickly determining if a color has already been updated in a loop.
