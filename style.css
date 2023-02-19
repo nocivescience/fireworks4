@@ -317,6 +317,9 @@ body {
 .body-container .menu-container .proyectos .letter {
   text-shadow: 0 0 20px white;
   font-family: "Righteous", cursive;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .body-container .menu-container .proyectos .letter:hover {
   cursor: context-menu;
