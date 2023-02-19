@@ -71,6 +71,8 @@ body
 	width: 100%
 	height: 100%
 	transition: filter 0.3s
+	margin-right: 100px
+	margin-left: 100px
 	canvas 
 		position: absolute
 		// Use lighten blend mode so the sky can be shown lighting up behind the canvases.
@@ -80,7 +82,7 @@ body
 	position: absolute
 	top: 0
 	width: 100%
-	padding-bottom: 50px
+	// padding-bottom: 50px
 	display: flex
 	justify-content: space-between
 	transition: opacity 0.3s, visibility 0.3s
@@ -239,14 +241,15 @@ body
 	.projects-menu
 		border: 1px solid white
 		padding: 20px
-		margin-right: 100px
-		margin-left: 100px
+		
 		border-radius: 5px
 		max-height: 200px
-		overflow-y: hidden
+		overflow-y: auto
+		scrollbar-width: thin
+		scrollbar-color: white #222
 		@media screen and ( max-width: 800px )
-			margin-right: 10px
-			margin-left: 10px
+			// margin-right: 10px
+			// margin-left: 10px
 		ul
 			display: flex
 			flex-direction: column
@@ -265,7 +268,13 @@ body
 					line-height: 25px
 					font-size: 1.5em
 					flex-wrap: wrap
-					
+
+	.projects-menu::-webkit-scrollbar
+		width: 6px
+		background-color: #222
+	.projects-menu::-webkit-scrollbar-thumb
+		background-color: red
+		border-radius: 10px
 	.menu-container
 		color: white
 		top: 0%
