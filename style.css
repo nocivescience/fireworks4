@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Tourney:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
 * {
   position: relative;
   box-sizing: border-box;
@@ -258,28 +259,65 @@ body {
   top: 0%;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
-.menu-container {
+.body-container .projects-menu {
+  border: 1px solid white;
+  padding: 20px;
+  margin-right: 100px;
+  margin-left: 100px;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: hidden;
+}
+@media screen and (max-width: 800px) {
+  .body-container .projects-menu {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+.body-container .projects-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.body-container .projects-menu ul li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.body-container .projects-menu ul li a {
   color: white;
-  position: absolute;
-  top: 27%;
+  text-decoration: none;
+  font-family: "Gugi", cursive;
+  line-height: 25px;
+  font-size: 1.5em;
+  flex-wrap: wrap;
+}
+.body-container .menu-container {
+  color: white;
+  top: 0%;
   right: 0;
   display: flex;
   width: 100%;
   justify-content: space-around;
   font-family: "Tourney", sans-serif;
   font-size: 3em;
+  line-height: 0em;
 }
-.menu-container .proyectos {
+.body-container .menu-container .proyectos {
   display: flex;
   cursor: context-menu;
 }
-.menu-container .proyectos .letter {
+.body-container .menu-container .proyectos .letter {
   text-shadow: 0 0 20px white;
   font-family: "Righteous", cursive;
 }
-.menu-container .proyectos .letter:hover {
+.body-container .menu-container .proyectos .letter:hover {
   cursor: context-menu;
   animation: rotarLetras 0.5s ease;
 }
